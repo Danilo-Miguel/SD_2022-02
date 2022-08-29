@@ -4,7 +4,3 @@ Comandos inciais git
 # git status # Mostra o status do repositório
 # git clone  # Clona uma repositório remoto para a direótio de trabalho local 
 # SD_2022-02
-
-Victor Ivo
-
- main
