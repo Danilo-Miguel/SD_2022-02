@@ -16,7 +16,8 @@ app.put('/lembretes/:id/observacoes', (req, res) =>{
     res.status(201).send(observacoesDoLembrete);
 });
 
-app.get('lembretes/:id/observacoes', (req, res) =>{
+app.get('/lembretes/:id/observacoes', (req, res) =>{
+    res.send(observacoesPorLembreteId[req.params.id] || [])
 
 });
 
