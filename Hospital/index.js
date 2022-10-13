@@ -12,11 +12,18 @@ database: 'hospital',
 password: 'password'
 })
 connection.query('SELECT * FROM medico', (err, results, fields) => {
-//results tem as linhas
-//fields tem meta dados sobre os resultados, caso estejam disponível
-res.send(results)
-res.send(fields)
-res.send('ok')
+res.json(results)
+})
+})
+app.get('/pacientes', (req, res) => {
+const connection = mysql.createConnection({
+host: 'localhost',
+user: 'root',
+database: 'hospital',
+password: 'password'
+})
+connection.query('SELECT * FROM paciente', (err, results, fields) => {
+res.json(results)
 })
 })
 const porta = 3000
